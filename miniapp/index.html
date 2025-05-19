@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NFT Казино</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #0c0c0c;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+      }
+      button {
+        font-size: 20px;
+        padding: 15px 30px;
+        background-color: #1c8ed6;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎰 NFT Казино</h1>
+    <p>Крути рулетку и получи шанс увидеть редкий NFT!</p>
+    <button onclick="spin()">Играть</button>
+    <div id="result" style="margin-top: 20px;"></div>
+
+    <script>
+      function spin() {
+        const nftImages = [
+          "https://example.com/nft1.jpg",
+          "https://example.com/nft2.jpg",
+          "https://example.com/nft3.jpg"
+        ];
+        const lostNFT = nftImages[Math.floor(Math.random() * nftImages.length)];
+        document.getElementById("result").innerHTML = `
+          <p>Упс! Ты почти выиграл это:</p>
+          <img src="${lostNFT}" width="250" style="border-radius: 10px;">
+        `;
+      }
+    </script>
+  </body>
+</html>
